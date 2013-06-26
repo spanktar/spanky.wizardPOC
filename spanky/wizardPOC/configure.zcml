@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:browser="http://namespaces.zope.org/browser"    
+    i18n_domain="spanky.wizardPOC">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Spanky: Wizard Proof of Concept"
+      directory="profiles/default"
+      description="Installs the spanky.wizardPOC package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- -*- extra stuff goes here -*- -->
+
+    <include package=".browser" />
+
+    <browser:page
+        name="broken"
+        for="*"
+        class=".forms.broken.BrokenFormWizard"
+        permission="zope2.View"
+    />    
+
+    <browser:page
+        name="working"
+        for="*"
+        class=".browser.views.WorkingFormView"
+        permission="zope2.View"
+        template="browser/templates/working.pt"
+    />   
+            
+</configure>
