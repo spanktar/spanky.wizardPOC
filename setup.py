@@ -27,7 +27,7 @@ setup(name='spanky.wizardPOC',
           'setuptools',
           # -*- Extra requirements: -*-
           'plone.app.z3cform',
-          'plone.supermodel', 
+          'plone.supermodel',
       ],
       entry_points="""
       # -*- Entry points: -*-

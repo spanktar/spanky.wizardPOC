@@ -2,7 +2,6 @@
 from plone.autoform.form import AutoExtensibleForm
 
 from collective.z3cform.wizard import wizard
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from spanky.wizardPOC.forms import schemas
 

@@ -1,4 +1,4 @@
 spanky.wizardPOC
 ================
 
-Proof of Concept for my Wizard Woes
+Proof of Concept for my Wizard Woes!

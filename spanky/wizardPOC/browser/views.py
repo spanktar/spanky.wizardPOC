@@ -3,8 +3,9 @@ from Products.Five import BrowserView
 
 from spanky.wizardPOC.forms.working import WorkingFormWizard
 
+
 class WorkingFormView(BrowserView):
-    
+
     wizard = None
 
     def getForm(self):
