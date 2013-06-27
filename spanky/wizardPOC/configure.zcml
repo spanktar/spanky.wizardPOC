@@ -28,11 +28,18 @@
     />
 
     <browser:page
+        name="maybe"
+        for="*"
+        class=".forms.broken.BrokenStepOne"
+        permission="zope2.View"
+    />
+    
+    <browser:page
         name="working"
         for="*"
         class=".browser.views.WorkingFormView"
         permission="zope2.View"
         template="browser/templates/working.pt"
     />
-
+    
 </configure>
