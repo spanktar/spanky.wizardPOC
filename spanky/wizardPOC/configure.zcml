@@ -28,9 +28,9 @@
     />
 
     <browser:page
-        name="maybe"
+        name="almost"
         for="*"
-        class=".forms.broken.BrokenStepOne"
+        class=".forms.almost.AlmostFormWizard"
         permission="zope2.View"
     />
     

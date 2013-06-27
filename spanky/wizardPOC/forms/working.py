@@ -9,11 +9,17 @@ from spanky.wizardPOC.forms import schemas
 class WorkingStepOne(AutoExtensibleForm, wizard.Step):
 
     label = u"Working Step One"
-    schema = schemas.IFormSchema
+    schema = schemas.IFormSchemaOne
 
 
+class WorkingStepTwo(AutoExtensibleForm, wizard.Step):
+
+    label = u"Working Step Two"
+    schema = schemas.IFormSchemaTwo
+    
+    
 class WorkingFormWizard(wizard.Wizard):
 
     __name__ = "WorkingFormWizard"
-    steps = (WorkingStepOne,)
+    steps = WorkingStepOne, WorkingStepTwo
     validate_back = False

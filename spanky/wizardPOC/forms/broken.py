@@ -10,12 +10,18 @@ from spanky.wizardPOC.forms import schemas
 class BrokenStepOne(AutoExtensibleForm, wizard.Step):
 
     label = u"Broken Step One"
-    schema = schemas.IFormSchema
+    schema = schemas.IFormSchemaOne
+
+
+class BrokenStepTwo(AutoExtensibleForm, wizard.Step):
+
+    label = u"Broken Step Two"
+    schema = schemas.IFormSchemaTwo
 
 
 class BrokenFormWizard(wizard.Wizard):
 
     __name__ = "BrokenFormWizard"
-    template = ViewPageTemplateFile('../browser/templates/broken.pt')
-    steps = (BrokenStepOne,)
+    steps = BrokenStepOne, BrokenStepTwo
     validate_back = False
+    template = ViewPageTemplateFile('../browser/templates/broken.pt')
